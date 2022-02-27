@@ -10,7 +10,7 @@
     <style>
         div.main { background-image: url("{% static 'img/main_wrapper.jpg'%}"); }
         body {
-            background-image: url("{% static 'img/background1.jpg'%}");
+            background-image: url("{% static 'img/backgrounds/'%}{{ bg_name }}");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -28,10 +28,10 @@
     <div class="nav">
         <aside>
             <ul class="nav">
-                <a href="/"><li><i class="fas fa-home"></i>Главная</li></a>
-                <a href="top100"><li><i class="fas fa-star"></i>Топ 100</li></a>
-                <a href="about"><li><i class="fas fa-address-card"></i>О проекте</li></a>
-                <a href="contact"><li><i class="fas fa-paper-plane"></i>Обратная связь</li></a>
+                <a href="{% url 'main' %}"><li><i class="fas fa-home"></i> Главная</li></a>
+                <a href="{% url 'top100' %}"><li><i class="fas fa-star"></i> Топ 100</li></a>
+                <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> О проекте</li></a>
+                <a href="{% url 'contact' %}"><li><i class="fas fa-paper-plane"></i> Обратная связь</li></a>
             </ul>
         </aside>
     </div>

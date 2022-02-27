@@ -8,11 +8,23 @@ ul.nav {
 }
 
 ul.nav li {
-    display: inline;
-    margin-right: 30px;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+    display: block;
+    color: #fff;
+    margin-right: 50px;
     padding: 15px;
+    transition: transform .4s ease;
+}
+
+ul.nav a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+ul.nav li:hover, ul.nav a:hover {
+    color: #6D2749;
+    text-decoration: none;
+    transform: scale(1.05);
 }
 
 div.nav {
@@ -33,4 +45,5 @@ div.main {
     width:42%;
     height: 80%;
     padding-bottom: 50%;
+    margin-bottom: 1%;
 }
